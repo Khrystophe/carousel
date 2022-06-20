@@ -34,7 +34,7 @@ $categorie = getCategory();
                         <input type="text" class="form-control" id="productName" name="name">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Créer la nouvelle catégorie</button>
                 </form>
             </div>
 
