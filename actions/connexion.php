@@ -21,6 +21,7 @@ if (isset($_POST['mail']) && !empty($_POST['mail']) && isset($_POST['password'])
             $_SESSION['users']['mail'] = $user['mail'];
             $_SESSION['users']['name'] = $user['name'];
             $_SESSION['users']['lastname'] = $user['lastname'];
+            $_SESSION['users']['type'] = $user['type'];
             header('location: ../index.php?success=connect');
         } else {
             header('location: ../login.php?error=password');

@@ -145,6 +145,12 @@
                                 </li>
                         <?php }
                         } ?>
+                        <?php if (isset($_SESSION['users']) && !empty($_SESSION['users'])) {
+                            if ($_SESSION['users']['type'] == 'admin') ?>
+                            <li class="nav-item">
+                                <button type="submit" class="btn btn-primary"> <a href="../ccarousel/admin" class="nav-link">Admin</a></button>
+                            </li>
+                        <?php } ?>
                     </ul>
                     <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
