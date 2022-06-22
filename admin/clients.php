@@ -17,10 +17,10 @@ $clients = getClients();
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">id</th>
-            <th scope="col">prénom</th>
-            <th scope="col">nom</th>
-            <th scope="col">email</th>
+            <th scope="col">Id</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Email</th>
 
         </tr>
     </thead>
