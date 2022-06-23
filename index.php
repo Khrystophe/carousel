@@ -1,5 +1,6 @@
 <?php
 $page = 'index';
+
 session_start();
 require('./require/co_bdd.php');
 require('./require/head.php');

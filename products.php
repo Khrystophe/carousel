@@ -18,7 +18,7 @@ $getAllProd = getAllProducts();
                 <p class="card-text"><?= $get['contenu'] ?></p>
                 <p class="card-text"><?= number_format($get['prix'], 2, ".", " ") ?>€</p>
                 <div class="lien">
-                    <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                    <a href="./actions/addpanier.php?id=<?= $get['id'] ?>&route=products" class="btn btn-primary">Ajouter au panier</a>
                     <a href="product.php?id=<?= $get['id'] ?>" class="btn btn-primary">Page produit</a>
                 </div>
             </div>

@@ -19,7 +19,7 @@ $selectProd = selectProduct();
 
                 <p class="card-text"><?= $selectProd['contenu'] ?></p>
                 <p class="card-text"><?= number_format($selectProd['prix'], 2, ".", " ") ?></p>
-                <a href="#" class="btn btn-primary">Ajouter au panier</a>
+                <a href="./actions/addpanier.php?id=<?= $selectProd['id'] ?>&route=product" class="btn btn-primary">Ajouter au panier</a>
                 <a href="product.php?id=<?= $selectProd['id'] ?>" class="btn btn-primary">Page produit</a>
             </div>
         </div>
