@@ -21,6 +21,7 @@ $clients = getClients();
             <th scope="col">Prénom</th>
             <th scope="col">Nom</th>
             <th scope="col">Email</th>
+            <th scope="col">Type</th>
 
         </tr>
     </thead>
@@ -32,6 +33,7 @@ $clients = getClients();
                 <td scope="col"><?= $client['name'] ?></td>
                 <td scope="col"><?= $client['lastname'] ?></td>
                 <td scope="col"><?= $client['mail'] ?></td>
+                <td scope="col"><?= $client['type'] ?></td>
 
                 <td scope="col"><a href="./assets/clients/deleteClient.php?id=<?= $client['id'] ?>">Supprimer</a></td>
             </tr>
