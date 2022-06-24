@@ -15,36 +15,39 @@ if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
   $produitsDansLePanier = $req->fetchAll();
 }
 
-?>
+if (isset($produitsDansLePanier) && !empty($produitsDansLePanier)) { ?>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Prix</th>
-      <th scope="col">Produit</th>
-      <th scope="col">Quantité</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php
-    $total = 0;
-    foreach ($produitsDansLePanier as $prod) { ?>
+  <table class="table">
+    <thead>
       <tr>
-        <th scope="row">1</th>
-        <td><?= $prod['nom'] ?></td>
-        <td><?= $prod['prix'] ?></td>
-        <td><img src="./admin/assets/uploads/<?= $prod['image'] ?>" width="100px" alt=""></td>
-        <td><?= $_SESSION['panier'][$prod['id']] ?></td>
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Produit</th>
+        <th scope="col">Quantité</th>
       </tr>
-    <?php
-      $total += $prod['prix'] * $_SESSION['panier'][$prod['id']];
-    } ?>
-  </tbody>
-</table>
-<p>Total : <?= $total ?> €</p>
+    </thead>
+    <tbody>
+      <?php
+      $total = 0;
+      foreach ($produitsDansLePanier as $prod) { ?>
+        <tr>
+          <th scope="row">1</th>
+          <td><?= $prod['nom'] ?></td>
+          <td><?= $prod['prix'] ?></td>
+          <td><img src="./admin/assets/uploads/<?= $prod['image'] ?>" width="100px" alt=""></td>
+          <td><?= $_SESSION['panier'][$prod['id']] ?></td>
+        </tr>
+      <?php
+        $total += $prod['prix'] * $_SESSION['panier'][$prod['id']];
+      } ?>
+    </tbody>
+  </table>
+  <p>Total : <?= $total ?> €</p>
+<?php } else { ?>
+  <h1>Votre panier est vide</h1>
+<?php }
 
-<?php
+
 require('./require/footer.php');
 ?>
