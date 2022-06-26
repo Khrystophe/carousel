@@ -18,7 +18,7 @@ if (isset($_SESSION['users']) && !empty($_SESSION['users'])) {
         <form action="./dashboard/editUser.php" method="post">
             <input type="hidden" value="<?= $getUser['id'] ?>" name="id">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<?= $getUser['mail'] ?>" name="mail">
             </div>
             <div class="mb-3">
