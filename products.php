@@ -25,3 +25,7 @@ $getAllProd = getAllProducts();
         </div><?php } ?>
 
 </div>
+
+<?php
+
+require('./require/footer.php');

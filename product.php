@@ -26,3 +26,7 @@ $selectProd = selectProduct();
     </div>
 
 </div>
+
+<?php
+
+require('./require/footer.php');
