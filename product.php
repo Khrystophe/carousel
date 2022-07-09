@@ -13,7 +13,7 @@ $selectProd = selectProduct();
 
     <div class="card">
         <div class="card-header">
-            <img src="./admin/assets/uploads/<?= $selectProd['image'] ?>" class="card-img" alt="...">
+            <img src="./admin/assets/uploads/<?= $selectProd['image'] ?>" class="card-img" alt="">
             <div class="card-body">
                 <h5 class="card-title"><?= $selectProd['nom'] ?></h5>
 

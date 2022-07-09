@@ -142,6 +142,3 @@ if (isset($_GET['success']) && !empty($_GET['success'])) {
 
 
 <?php require('./require/footer.php') ?>
-</body>
-
-</html>
